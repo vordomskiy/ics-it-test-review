@@ -13,12 +13,12 @@ begin
 		where imf.ID = @Record_ID
 			and imf.FlagLoaded = cast(1 as bit)
 	)
-		begin
-			set @ErrorMessage = 'Ошибка при загрузке файла, проверьте корректность данных'
+	begin
+		set @ErrorMessage = 'Ошибка при загрузке файла, проверьте корректность данных'
 
-			raiserror(@ErrorMessage, 3, 1)
-			return
-		end
+		raiserror(@ErrorMessage, 3, 1)
+		return
+	end
 
 	--Чтение из слоя временных данных
 	select
