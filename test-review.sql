@@ -6,7 +6,7 @@ begin
 	declare @RowCount int = (select count(*) from syn.SA_CustomerSeasonal)
 	,@ErrorMessage varchar(8000)
 
--- Проверка на корректность загрузки
+	-- Проверка на корректность загрузки
 	if not exists (
 	select 1
 	from syn.ImportFile as f
