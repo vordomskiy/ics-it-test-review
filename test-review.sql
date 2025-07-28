@@ -71,7 +71,7 @@ begin
 		or try_cast(isnull(cs.FlagActive, 0) as bit) is null
 
 	-- Обработка данных из файла
-	merge into syn.CustomerSeasonal as cs
+	merge syn.CustomerSeasonal as cs
 	using (
 		select
 			cs_temp.ID_dbo_Customer
